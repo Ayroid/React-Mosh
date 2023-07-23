@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 // CREATE A CLASS COMPONENT CALLED COUNTER THAT EXTENDS THE REACT COMPONENT
 class Counter extends Component {
-  // STATE OBJECT
+  // STATE OBJECT - USED TO STORE DATA THAT THE COMPONENT NEEDS
   state = {
     count: 0,
     // imageUrl: "https://picsum.photos/200",
@@ -51,9 +51,15 @@ class Counter extends Component {
     );
   }
 
+  // CONDITIONAL RENDERING - IF THE COUNT IS ZERO, DISPLAY YELLOW BUTTON, ELSE DISPLAY BLUE BUTTON
   getBtnClasses() {
     let classes = "btn btn-sm m-2";
     classes += this.state.count === 0 ? " btn-warning" : " btn-primary";
+
+    // THIS IS THE SAME AS THE ABOVE CODE
+    // let classes = "btn btn-sm m-2 btn-";
+    // classes += this.state.count === 0 ? "warning" : "primary";
+
     return classes;
   }
 
