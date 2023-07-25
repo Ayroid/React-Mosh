@@ -1,5 +1,23 @@
-function ListGroup(){
-    return <h1>ListGroup</h1>
+function ListGroup() {
+  return (
+
+    /*IN ORDER TO RETURN MULTIPLE TAGS FROM A COMPONENT, WE CAN WRAP EVERYTHING INSIDE:
+      1. <div> </div>
+      2. <React.Fragment> </React.Fragment>
+      3. <> </>
+    */
+
+    <>
+      <h1>List</h1>
+      <ul className="list-group">
+        <li className="list-group-item">An item</li>
+        <li className="list-group-item">A second item</li>
+        <li className="list-group-item">A third item</li>
+        <li className="list-group-item">A fourth item</li>
+        <li className="list-group-item">And a fifth one</li>
+      </ul>
+    </>
+  );
 }
 
 export default ListGroup;
