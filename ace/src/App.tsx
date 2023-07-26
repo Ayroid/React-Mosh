@@ -28,19 +28,34 @@
 //   );
 // }
 
+import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 
 const App = () => {
   const btnType = "warning";
   const btnValue = btnType.toUpperCase();
+  const [alertVisible, setAlertVisible] = useState(false);
 
   return (
     <div>
-      <Alert>
-        Hello <span>World</span>
-      </Alert>
-      <Button btnType={btnType} btnValue={btnValue}></Button>
+      {alertVisible && (
+        <Alert
+          onClose={() => {
+            setAlertVisible(false);
+          }}
+        >
+          Hello World!!
+        </Alert>
+      )}
+      <Button
+        onClick={() => {
+          setAlertVisible(true);
+        }}
+        btnType={btnType}
+      >
+        {btnValue}
+      </Button>
     </div>
   );
 };

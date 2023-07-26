@@ -1,13 +1,14 @@
 interface Props {
   btnType: string;
-  btnValue: string;
+  children: string;
+  onClick: () => void;
 }
 
-const Button = ({ btnType, btnValue }: Props) => {
-  const classes = "btn btn-";
+const Button = ({ btnType, children, onClick }: Props) => {
+  const classes = "m-1 border btn btn-";
   return (
-    <button type="button" className={classes + btnType + " m-2 border"}>
-      {btnValue}
+    <button onClick={onClick} type="button" className={classes + btnType}>
+      {children}
     </button>
   );
 };
