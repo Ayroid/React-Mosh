@@ -2,15 +2,12 @@
 
 import { useState } from "react";
 
-function ListGroup() {
-  const items = [
-    "Dehradun",
-    "Mumbai",
-    "Ayodhya",
-    "Vrindavan",
-    "Mathura",
-    "Kurukshetra",
-  ];
+interface Props {
+  items: string[];
+  heading: string;
+}
+
+function ListGroup({ items, heading }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   // const handleClick = (event: MouseEvent) => {
@@ -26,7 +23,7 @@ function ListGroup() {
     */
 
     <>
-      <h1>List</h1>
+      <h1>{heading}</h1>
       {/* CONDITIONAL RENDERING */}
       {items.length === 0 && <p>No Item Found</p>}
       <ul className="list-group">
