@@ -29,15 +29,18 @@
 // }
 
 import Alert from "./components/Alert";
+import Button from "./components/Button";
 
 const App = () => {
-  // const text = "Primary Alert!!";
+  const btnType = "warning";
+  const btnValue = btnType.toUpperCase();
 
   return (
     <div>
       <Alert>
-        Hello World
+        Hello <span>World</span>
       </Alert>
+      <Button btnType={btnType} btnValue={btnValue}></Button>
     </div>
   );
 };
