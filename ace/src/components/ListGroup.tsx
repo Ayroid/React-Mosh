@@ -1,3 +1,7 @@
+// import { MouseEvent } from "react";
+
+import { useState } from "react";
+
 function ListGroup() {
   const items = [
     "Dehradun",
@@ -7,7 +11,11 @@ function ListGroup() {
     "Mathura",
     "Kurukshetra",
   ];
-  // items = [];
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+
+  // const handleClick = (event: MouseEvent) => {
+  //   console.log(event);
+  // };
 
   return (
     /*
@@ -22,12 +30,16 @@ function ListGroup() {
       {/* CONDITIONAL RENDERING */}
       {items.length === 0 && <p>No Item Found</p>}
       <ul className="list-group">
-        {items.map((item) => (
+        {items.map((item, index) => (
           <li
-            className="list-group-item"
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
             key={item}
             onClick={() => {
-              console.log("Clicked");
+              setSelectedIndex(index);
             }}
           >
             {item}
