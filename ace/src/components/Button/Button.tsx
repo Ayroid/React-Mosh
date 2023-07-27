@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Button = ({children, onClick }: Props) => {
-  const classes = styles.customBtn;
+  const classes = [styles.btn, styles.btnWarning].join(" ");
   return (
     <button onClick={onClick} type="button" className={classes}>
       {children}

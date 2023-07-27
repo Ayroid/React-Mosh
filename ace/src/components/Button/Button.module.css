@@ -1,12 +1,52 @@
-.customBtn{
-    background-color: #111111;
+.btn{
+    padding: 1rem 2rem;
+    border-radius: 5px;
     border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
+}
+
+.btnPrimary{
+    background-color: blue;
+    color: white;
+}
+
+.btnPrimary:hover{
+    background-color: darkblue;
+}
+
+.btnSecondary{
+    background-color: grey;
+    color: white;
+}
+
+.btnSecondary:hover{
+    background-color: darkgrey;
+}
+
+.btnDanger{
+    background-color: red;
+    color: white;
+}
+
+.btnDanger:hover{
+    background-color: darkred;
+}
+
+.btnSuccess{
+    background-color: green;
+    color: white;
+}
+
+.btnSuccess:hover{
+    background-color: darkgreen;
+}
+
+.btnWarning{
+    background-color: orange;
+    color: black;
+}
+
+.btnWarning:hover{
+    background-color: darkorange;
 }
