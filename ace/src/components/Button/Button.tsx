@@ -1,13 +1,15 @@
+import styles from "./Button.module.css";
+
 interface Props {
-  btnType: string;
+  // btnType: string;
   children: string;
   onClick: () => void;
 }
 
-const Button = ({ btnType, children, onClick }: Props) => {
-  const classes = "m-1 border btn btn-";
+const Button = ({children, onClick }: Props) => {
+  const classes = styles.customBtn;
   return (
-    <button onClick={onClick} type="button" className={classes + btnType}>
+    <button onClick={onClick} type="button" className={classes}>
       {children}
     </button>
   );

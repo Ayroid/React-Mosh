@@ -51,7 +51,7 @@ const App = () => {
         onClick={() => {
           setAlertVisible(true);
         }}
-        btnType={btnType}
+        // btnType={btnType}
       >
         {btnValue}
       </Button>
