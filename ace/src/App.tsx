@@ -2,7 +2,8 @@ import { useState } from "react";
 import Alert from "./components/Alert/Alert";
 import Button from "./components/Button/Button";
 import ListGroup from "./components/ListGroup";
-import { BsFillCalendarFill } from "react-icons/bs";
+// import { BsFillCalendarFill } from "react-icons/bs";
+import Like from "./components/Like/Like";
 
 const App = () => {
   const btnType = "warning";
@@ -59,7 +60,11 @@ const App = () => {
 
       {/* Icon Component */}
 
-      <BsFillCalendarFill color="black" size="3rem" />
+      {/* <BsFillCalendarFill color="black" size="3rem" /> */}
+
+      {/* Like Component */}
+
+      <Like onClick={()=>{console.log('Clicked')}}/>
     </div>
   );
 };
