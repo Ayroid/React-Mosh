@@ -1,6 +1,5 @@
-// import { MouseEvent } from "react";
-
 import { useState } from "react";
+import styles from './ListGroup.module.css'
 
 interface Props {
   items: string[];
@@ -11,10 +10,6 @@ interface Props {
 function ListGroup({ items, heading, onSelectItem }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
-  // const handleClick = (event: MouseEvent) => {
-  //   console.log(event);
-  // };
-
   return (
     /*
       IN ORDER TO RETURN MULTIPLE TAGS FROM A COMPONENT, WE CAN WRAP EVERYTHING INSIDE:
@@ -22,18 +17,17 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
         2. <React.Fragment> </React.Fragment>
         3. <> </>
     */
-
     <>
       <h1>{heading}</h1>
       {/* CONDITIONAL RENDERING */}
       {items.length === 0 && <p>No Item Found</p>}
-      <ul className="list-group">
+      <ul className={styles.listGroup}>
         {items.map((item, index) => (
           <li
             className={
               selectedIndex === index
-                ? "list-group-item active"
-                : "list-group-item"
+                ? [`${styles.listGroupItem}, ${styles.active}`].join(' ')
+                : `${styles.listGroupItem}`
             }
             key={item}
             onClick={() => {

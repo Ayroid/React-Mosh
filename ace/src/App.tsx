@@ -1,44 +1,32 @@
-// ListGroup Componen Call
-
-// import ListGroup from "./components/ListGroup";
-// function App() {
-//   const items = [
-//     "Dehradun",
-//     "Mumbai",
-//     "Ayodhya",
-//     "Vrindavan",
-//     "Mathura",
-//     "Kurukshetra",
-//   ];
-
-//   const heading = "Cities";
-
-//   const handleSelectItem = (item: string) => {
-//     console.log(item);
-//   };
-
-//   return (
-//     <div>
-//       <ListGroup
-//         items={items}
-//         heading={heading}
-//         onSelectItem={handleSelectItem}
-//       />
-//     </div>
-//   );
-// }
-
 import { useState } from "react";
-import Alert from "./components/Alert";
-import Button from "./components/Button";
+import Alert from "./components/Alert/Alert";
+import Button from "./components/Button/Button";
+import ListGroup from "./components/ListGroup";
 
 const App = () => {
   const btnType = "warning";
   const btnValue = btnType.toUpperCase();
   const [alertVisible, setAlertVisible] = useState(false);
 
+  const items = [
+    "Dehradun",
+    "Mumbai",
+    "Ayodhya",
+    "Vrindavan",
+    "Mathura",
+    "Kurukshetra",
+  ];
+
+  const heading = "Cities";
+
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
+
   return (
     <div>
+      {/* Alert Component */}
+
       {alertVisible && (
         <Alert
           onClose={() => {
@@ -48,6 +36,17 @@ const App = () => {
           Hello World!!
         </Alert>
       )}
+
+      {/* List Component */}
+
+      <ListGroup
+        items={items}
+        heading={heading}
+        onSelectItem={handleSelectItem}
+      ></ListGroup>
+
+      {/* Button Component */}
+
       <Button
         onClick={() => {
           setAlertVisible(true);
