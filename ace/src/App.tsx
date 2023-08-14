@@ -15,6 +15,7 @@ const App = () => {
   const btnValue = btnType.toUpperCase();
   const [alertVisible, setAlertVisible] = useState(false);
   const [cartItems, setCartItems] = useState(["Product 1", "Product 2"]);
+
   const [game, setGame] = useState({
     id: 1,
     player: {
@@ -22,6 +23,7 @@ const App = () => {
       age: 40,
     },
   });
+
   const [pizza, setPizza] = useState({
     name: "Margherita",
     price: 200,
