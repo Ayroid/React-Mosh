@@ -34,7 +34,7 @@ const ReactHookForm = () => {
           className="form-control"
         />
       </div>
-      <button className="btn btn-primary">SUBMIT</button>
+      <button className="btn btn-primary">SUBMIT!</button>
     </form>
   );
 };
